@@ -21,18 +21,18 @@
             var cookiesNum = getCookie("cook");
             if (cookiesNum != "") {
                 alert("You have " + cookiesNum.toString() + " cookies!");
-                cookiesNum++
+                cookiesNum++;
             } else {
                 cookiesNum = document.getElementById("input").value;
                 if (cookiesNum != "" && cookiesNum != null) {
                     setCookie("cook", cookiesNum, 365);
                 }
             }
-            function reset(){
+            function reset() {
                 var cookiesNum = document.getElementById("input").value;
-         
-                    setCookie("cook", cookiesNum, 365);
-               
+                alert("asdsada");
+                setCookie("cook", cookiesNum, 365);
+
             }
         }
     </script>
