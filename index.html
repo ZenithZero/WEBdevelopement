@@ -20,21 +20,32 @@
         function checkCookie() {
             var cookiesNum = getCookie("cook");
             if (cookiesNum != "") {
-                alert("You have " + cookiesNum + "cookies!");
+                alert("You have " + cookiesNum.toString() + " cookies!");
+                cookiesNum++
             } else {
                 cookiesNum = document.getElementById("input").value;
                 if (cookiesNum != "" && cookiesNum != null) {
                     setCookie("cook", cookiesNum, 365);
                 }
             }
+            function reset(){
+              if (cookiesNum != "" && cookiesNum != null) {
+                    setCookie("cook", cookiesNum, 365);
+                }   
+            }
         }
     </script>
     </head>
     <body>
+    <p>
+    Enter how many cookies you think you have!
+    </p>
     <input id="input">
     </input>
     <button id="store" onclick="checkCookie()">Click This For Cookies
     </button>
-    
+    <button id="reset" onclick="reset()">
+    Reset Your Cookies!    
+    </button>
     </body>
 </html>
