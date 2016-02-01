@@ -20,15 +20,14 @@
         function checkCookie() {
             var cookiesNum = getCookie("cook");
             if (cookiesNum != "") {
-                alert("You have " + cookiesNum.toString() + " cookies!");
-                cookiesNum++;
+                alert("You have " + cookiesNum + " cookies!");
             } else {
                 cookiesNum = document.getElementById("input").value;
                 if (cookiesNum != "" && cookiesNum != null) {
                     setCookie("cook", cookiesNum, 365);
                 }
             }
-            function reset() {
+            function re() {
                 var cookiesNum = document.getElementById("input").value;
                 alert("asdsada");
                 setCookie("cook", cookiesNum, 365);
@@ -45,8 +44,8 @@
     </input>
     <button id="store" onclick="checkCookie()">Click This For Cookies
     </button>
-    <button id="reset" onclick="reset()">
-    Reset Your Cookies!    
+    <button id="reset" onclick="re()">
+    Reset Your Cookies! Now!!!    
     </button>
     </body>
 </html>
