@@ -20,7 +20,7 @@
         function checkCookie() {
             var cookiesNum = getCookie("cook");
             if (cookiesNum != "") {
-                alert("You have " + cookiesNum + " cookies!");
+                alert("Your cookies are: " + cookiesNum + " !");
             } else {
                 cookiesNum = document.getElementById("input").value;
                 if (cookiesNum != "" && cookiesNum != null) {
@@ -31,7 +31,7 @@
         }
          function re() {
                 var cookiesNum = document.getElementById("input").value;
-                alert("asdsada");
+                alert("RESET");
                 setCookie("cook", cookiesNum, 365);
 
             }
