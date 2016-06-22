@@ -1,52 +1,64 @@
+<!DOCTYPE html>
 <html>
     <head>
-    <script>
-        function setCookie(cname, cvalue, exdays) {
-            var d = new Date();
-            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-            var expires = "expires=" + d.toUTCString();
-            document.cookie = cname + "=" + cvalue + "; " + expires;
-        }
-        function getCookie(cname) {
-            var name = cname + "=";
-            var ca = document.cookie.split(';');
-            for (var i = 0; i < ca.length; i++) {
-                var c = ca[i];
-                while (c.charAt(0) == ' ') c = c.substring(1);
-                if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
-            }
-            return "";
-        }
-        function checkCookie() {
-            var cookiesNum = getCookie("cook");
-            if (cookiesNum != "") {
-                alert("Your cookies are: " + cookiesNum + " !");
-            } else {
-                cookiesNum = document.getElementById("input").value;
-                if (cookiesNum != "" && cookiesNum != null) {
-                    setCookie("cook", cookiesNum, 365);
-                }
-            }
-           
-        }
-         function re() {
-                var cookiesNum = document.getElementById("input").value;
-                alert("RESET");
-                setCookie("cook", cookiesNum, 365);
-
-            }
-    </script>
+	<title>DC - Ipad 2</title>    
+        <script src="jquery-2.1.4.min.js"></script>
+        <script src="hideshow.js"></script>
+<!--        <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>-->
+        <link href='https://fonts.googleapis.com/css?family=Titillium+Web|Lato:300,400' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="hideshow.css">
+        
     </head>
+
+    
+    
     <body>
-    <p>
-    Enter how many cookies you think you have!
-    </p>
-    <input id="input">
-    </input>
-    <button id="store" onclick="checkCookie()">Click This For Cookies
-    </button>
-    <button id="reset" onclick="re()">
-    Reset Your Cookies! Now!!!    
-    </button>
-    </body>
+        <div id="image"></div>
+<div id="hidden" onclick="hide('hidden')">
+	<br style="line-height:20px;"></br>
+	<p></p>
+	<table>   
+	<tr>
+		<p class="numbers4">500-599</p>
+	<p>Languages</p>
+<p>Science</p>
+<p>Technology</P>
+<p>Arts & Recreation</p>
+</table>
+
+ <p class="touch">Touch to search</p>
+        </div>
+        <div id="searchcontainer">
+           
+
+        <ul class="nav-main__list">
+            <li class="nav-main__item">
+                <a id="logoutbtn" href="javascript:window.location.reload();">
+                    <div class="nav-main__anchor">Back</div>
+                </a>
+            </li>
+            <li class="nav-main__item">
+                <a>
+                    <div class="nav-main__anchor"><span id="SecondsUntilExpire">03:00</span></div>
+                </a>
+            </li>
+            <li class="nav-main__item">
+                <a id="resetbtn" href="javascript:_idleSecondsCounter = 0;">
+                    <div class="nav-main__anchor">Reset timer</div>
+                </a>
+            </li>
+
+        </ul>
+            
+            
+        <div id="iwrapper" style="width: 100%; height: 500%; overflow:scroll; -webkit-overflow-scrolling: touch;">
+           <!--<iframe id="searchsite" src="https://kentdenver.catalog.aspencat.info/"></iframe>-->
+		<object id="searchsite" type="text/html" data="https://kentdenver.catalog.aspencat.info/"></object>
+        </div>
+            
+        
+        
+        </div>
+            </body>
+    
 </html>
